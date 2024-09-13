@@ -1,0 +1,27 @@
+/** Step one **/
+/** Did in HTML **/
+/** Step two **/
+h1, h2{
+    font-family: "Fascinate Inline", sans-serif;
+}
+/** Step three **/
+h1{
+    font-size: 46px;
+    letter-spacing: .50px;
+    align-items: center;
+    justify-content: center;
+    color: #ff5733;
+}
+/** Step four **/
+p, a, li{
+    font-family: "Playfair Display", sans-serif;
+}
+/** Step five **/
+span{
+    color: #58a123;
+}
+/** Step six **/
+h3{
+    font-size: 1.75em;
+    text-shadow: 4px 3px 4px rgba(0, 0, 0, .7);
+}
