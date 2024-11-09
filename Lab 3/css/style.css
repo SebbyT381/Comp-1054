@@ -1,0 +1,123 @@
+/*
+    Colour Palette:
+    Black - #060E0B
+    Dark green - #337155
+    Medium green - #8CD790
+    White (very light green) - #D7FFF1
+*/
+
+/** Using group selectors to style the text and setting basic body styling **/
+h1,h2,h3,h4,h5,h6{
+    font-family: "DynaPuff", sans-serif;
+    color: #060E0B;
+}
+p,a,li,figcaption,td{
+    font-family: "Knewave", sans-serif;
+    color: #060E0B;
+    text-decoration: none;
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    background-color: #337155;
+}
+
+/** Header **/
+header{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    background-color: #8CD790;
+}
+header h1{
+    font-family: "Knewave", sans-serif;
+    padding: 20px;
+}
+
+/** Main **/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+main h3{
+    letter-spacing: 1px;
+    padding: 5%;
+}
+main div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main div a{
+    letter-spacing: 1.5px;
+}
+
+/** SVG Button **/
+.svg-btn{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    transition: .5s;
+}
+.svg-btn svg, .svg-btn svg rect{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    transition: .5s;
+}
+.svg-btn svg rect{
+    stroke: #D7FFF1;
+    stroke-width: 2px;
+}
+.svg-btn:hover{
+    /* On hover, change background colour and text colour */
+    background: #8CD790;
+    color: #D7FFF1;
+    transition-delay: .9s;
+}
+.svg-btn:hover svg rect{
+    /* Playing the animation keyframes upon hover */
+    animation: to-dash 1s forwards;
+}
+.svg-btn:hover{
+    /* Adding a fake light-up effect alongside the hover animation */
+    box-shadow: 1px 2px 20px;
+}
+
+/** Keyframe Animation **/
+
+/** SVG Stroke **/
+@keyframes to-dash{
+    /* Have the stroke encircle the whole button before turning into dashes */
+    0%{
+        stroke-width: 5px;
+        stroke-dasharray: 520; /* Value changes stroke from solid -> dotted. 520 = fully solid. 0 = many dashes */
+        stroke-dashoffset: 520; /* Specifies how far away from the start the stroke should begin */
+    }
+    50%{
+        stroke-dasharray: 520;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-width: 5px;
+        stroke-dasharray: 20;
+        stroke-dashoffset: 0;
+    }
+}
+
+/** Footer **/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h4{
+    padding: 5%;
+}
