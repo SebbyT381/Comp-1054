@@ -1,0 +1,341 @@
+/** 
+    Colour Palette:
+    Off-white -> #F8F8F8
+    Black -> #020200
+    Red -> #B2122B
+    Light yellow -> #FBE63A
+    Dark yellow -> #F7AD1C
+    Dark brown -> #2D0D03
+    
+**/
+
+/*** WHILE IN DEV: Please keep BG colours to easily identifiable so that layout
+is easier to make ***/
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F8F8F8;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        'header header header header'
+        'mast mast mast mast'
+        'main main main main'
+        'footer footer footer footer';
+}
+/** Fonts **/
+h1,h2,h3,h4,h5,h6{
+    font-family: "Yrsa", sans-serif;
+}
+p,a,li,figcaption,td{
+    font-family: "Yrsa", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+/** Desktop Header **/
+header{
+    grid-area: header;
+}
+.desktop-nav{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 999;
+    background-color: #B2122B;
+}
+/* Logo */
+.nav-logo{
+    width: auto;
+    height: 115px;
+    flex-grow: 1;
+}
+.desktop-nav div a img{
+    width: auto;
+    height: 100%;
+}
+/* Links */
+.desktop-nav nav menu{
+    list-style: none;
+    display: flex;
+}
+.desktop-nav nav menu li{
+    font-family: "Freckle Face", sans-serif;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    color: #F8F8F8;
+}
+.desktop-nav li:hover{
+    cursor: pointer;
+    color: #FBE63A;
+}
+.mobile-nav{
+    display: none;
+}
+/** Masthead **/
+.masthead{
+    grid-area: mast;
+    height: 80vh;
+    background-image: url(../img/site_pattern.png);
+    background-size: cover;
+    background-position: top;
+}
+.masthead div .row-one{
+    display: grid;
+    grid-template-columns: 3fr, 1fr;
+}
+.row-one{
+    background-color: rgba(10, 0, 0, .7);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.row-one div{
+    padding: 20px;
+}
+.row-one img{
+    width: 100%;
+    height: auto;
+}
+.row-one-text{
+    color: #020200;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 20px;
+}
+.row-one-text h1{
+    font-family: "Freckle Face", sans-serif;
+    letter-spacing: 5px;
+    font-size: 3.2em;
+}
+.row-one-text p{
+    font-size: 2em;
+}
+/** Main **/
+main{
+    grid-area: main;
+    display: grid;
+}
+/* Row Two */
+.row-two{
+    height: 15vh;
+    background-image: url(../img/cc_deco_strip.png);
+    background-size: cover;
+    background-position: center;
+}
+/* Row Three */
+.row-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-image: url(../img/coffee_bg.jpg); /* Credit: https://unsplash.com/photos/coffee-bean-lot-7vb8YRXPdOQ Hans Ripa on Unsplash */
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+.row-three h3{
+    font-family: "Freckle Face", sans-serif;
+    color: #F8F8F8;
+    text-shadow: 4px 3px 3px rgba(0, 0, 0, .6);
+    letter-spacing: 3px;
+    font-size: 2.5em;
+    background-color: rgba(0, 0, 0, .5);
+}
+.row-three-prod{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.row-three-img img{
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+.row-three-img img:hover{
+    transform: scale(1.2);
+}
+.product{
+    padding: 20px;
+}
+.row-three-text{
+    color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+.row-three-text h4{
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, .5);
+}
+.row-three-text p{
+    background-color: rgba(0, 0, 0, .5);
+}
+/* Row Four */
+.row-four{
+    height: 15vh;
+    background-image: url(../img/cc_deco_strip.png);
+    background-size: cover;
+    background-position: center;
+}
+/* Row Five */
+.row-five{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50vh;
+    background-image: url(../img/row_five_bg.jpg); /* Credit: https://unsplash.com/photos/brown-and-black-striped-textile-RI5sje0aWnw Oleg Moroz on Unsplash */
+    background-size: cover;
+    background-position: bottom;
+}
+.row-five div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.row-five h3{
+    font-family: "Freckle Face", sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 5px 10px;
+    text-decoration: underline;
+}
+.row-five p{
+    padding: 15px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, .5);
+}
+.mission-statement,
+.company-info{
+    background-color: rgba(200, 170, 100, .5);
+    text-align: center;
+}
+/** Footer **/
+footer{
+    grid-area: footer;
+    background-color: #B2122B;
+}
+.footer-row-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-row-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+/* Logo */
+.footer-logo{
+    padding: 20px 20px 0 0;
+}
+.footer-logo img{
+    height: 100px;
+    width: auto;
+}
+/* Icons */
+.footer-icons ul{
+    list-style: none;
+    display: flex;
+}
+.footer-icons ul li{
+    padding: 0 10px;
+}
+.footer-icons ul li i{
+    font-size: 2.5em;
+    color: #F8F8F8;
+    transition: .3s ease-in;
+}
+.footer-icons ul li i:hover{
+    transform: scale(1.2);
+    color: #FBE63A;
+    cursor: pointer;
+}
+/* Text */
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F8F8F8;
+    padding: 20px 80px 20px 0;
+}
+.footer-text h5{
+    font-size: 2em;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+.footer-text p{
+    font-size: 1.4em;
+}
+/* Form */
+.footer-form form{
+    width: 400px;
+    padding-bottom: 30px;
+}
+.footer-form form p{
+    width: 100%;
+    color: #F8F8F8;
+    padding: 5px;
+}
+.footer-form form p input,
+.footer-form form p textarea{
+    width: 100%;
+    border: solid 2px #020200;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Submit Button */
+.footer-form form p input[type="submit"]{
+    background-color: #FBE63A;
+    transition: .3s ease-in;
+    width: 424px;
+}
+.footer-form form p input[type="submit"]:hover{
+    background-color: #F7AD1C;
+    cursor: pointer;
+}
+/** Media Queries **/
+/* 
+    Default: Large computer screens.
+*/
+@media screen and (max-width: 1440px){
+    .masthead{
+        height: 60vh;
+    }
+    .row-three{
+        height: 80vh;
+    }
+    .row-five{
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 1024px){
+    .masthead{
+        height: 70vh;
+    }
+    .row-three{
+        height: 90vh;
+    }
+}
+@media screen and (max-width: 768px){
+    .desktop-nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    /** Mobile Nav **/
+    .mobile-nav{
+        background: #B2122B;
+    }
+}
